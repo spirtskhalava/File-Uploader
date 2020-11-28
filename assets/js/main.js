@@ -333,10 +333,8 @@ class uploader {
             DBLoad.open('post', URL, true);
             DBLoad.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    if (this.responseText && typeof this.responseText === "object") {
-                        var datas = JSON.parse(this.responseText);
-                        }
-                    
+                
+                    var datas = JSON.parse(this.responseText);
                     if (datas && datas.length > 0) {
                         var length = datas.length;
                         var counter = 0;
