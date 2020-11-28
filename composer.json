@@ -1,0 +1,5 @@
+{
+    "require": {
+        "khanzadimahdi/uploadmanager": "^1.0"
+    }
+}
