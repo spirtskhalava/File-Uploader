@@ -198,7 +198,10 @@ class uploader {
                 if (self.states[stateNumber].request.readyState == 4) {
                     if (self.states[stateNumber].request.status == 200) {
                         if (self.showElem) {
-                            var response = JSON.parse(this.responseText) ;
+                             if (this.responseText && typeof this.responseText === "object") {
+                                var response = JSON.parse(this.responseText) ;
+                                }
+                          
                             if (response.id) {
                                 self.states[stateNumber].id = response.id;
                             }
@@ -330,7 +333,10 @@ class uploader {
             DBLoad.open('post', URL, true);
             DBLoad.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    var datas = JSON.parse(this.responseText);
+                    if (this.responseText && typeof this.responseText === "object") {
+                        var datas = JSON.parse(this.responseText);
+                        }
+                    
                     if (datas && datas.length > 0) {
                         var length = datas.length;
                         var counter = 0;

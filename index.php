@@ -18,7 +18,7 @@
                             <tr>
                                 <th class="text-left" scope="col">image name</th>
                                 <th class="text-center" scope="col">image status</th>
-                                <th class="text-center" scope="col">tools</th>
+                                <th class="text-right" scope="col">tools</th>
                             </tr>
                         </thead>
                         <tbody>
